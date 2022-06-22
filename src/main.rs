@@ -7,19 +7,19 @@ fn main() {
     let third_argument: String = args().nth(3).unwrap();
     
     match second_argument.as_str() {
-        "plus" =>  {
+        "plus" | "+" =>  {
             let math: i32 = first_argument.parse::<i32>().unwrap() + third_argument.parse::<i32>().unwrap();
             println!("{}", math);
         }
-         "minus" =>  {
+         "minus" | "-" =>  {
             let math: i32 = first_argument.parse::<i32>().unwrap() - third_argument.parse::<i32>().unwrap();
             println!("{}", math);
         },
-         "divide" =>  {
+         "divide" | "/" =>  {
             let math: i32 = first_argument.parse::<i32>().unwrap() / third_argument.parse::<i32>().unwrap();
             println!("{}", math);
         },
-         "multiply" | "times" =>  {
+         "multiply" | "times" | "*" =>  {
             let math: i32 = first_argument.parse::<i32>().unwrap() * third_argument.parse::<i32>().unwrap();
             println!("{}", math);
         }
