@@ -1,3 +1,5 @@
+use crate::docs::docs;
+
 pub struct Args {
     pub first_arg: String,
     pub second_arg: String,
@@ -43,7 +45,11 @@ pub fn math(args: Args) {
             );
             println!("{}", math);
         }
-        _ => println!("Not a valid argument"),
+        _ => {
+            println!("Not a valid argument");
+            println!();
+            docs::print_math_operations();
+        }
     }
 }
 
